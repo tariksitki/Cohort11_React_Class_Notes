@@ -1,0 +1,360 @@
+
+
+react vue library
+
+frame insani bazi seylere zorlar kullanamk zorundayiz
+
+angular framework
+zorunlu kurallalri vafr
+js library ama type script kullanmak zorunda
+
+en iyisini yptik clean code icin sizde buna uyun diyorlar framework 
+
+librarry bizi cok zorlamaz daha özgür flexible
+sunu kullansan iyi olur ama zorunlu degilsin
+
+jsx (js xml)  bunu kullansan iyi olur diyor 
+ama zorunlu degil
+
+
+library de secme hakki doguyor.
+cogu islem third pirty ali oluyor
+bircok dependency oluyor. bazen 6 ay sonra kullanimdan kaldirilabilir. Bu da dezavantaj. ama esnekli olarak daha iyi
+mesela react router bir alternatif
+ama next js de kullanabiliriz
+
+
+
+framework cok kural var ögrenmek zor
+angular react da göre daha zor olabilir
+
+
+A js library for building user interfaces  (docs da bu sekilde)
+
+
+
+virtual dom önemli özellik
+
+2011 de facebook
+ilk etapda kendisi icin gelistirmis dünyaya acmadan önce
+kendi programlari gelistirmek icin
+
+
+
+nasil daha az page yenileme ile veriler getirilebilir diye düsünmüsler
+sadece db nin hizli olmasi yeterli degil
+
+react da nested bir yapi var.
+biz en alttaki p elementi yenileyince tüm silsile yenilenmez
+birisi like butonuna basinca tüm sayfa render edilse cok yavaslar
+react in cikis felsefesi buradan 
+
+nasil olurda exessiv rendering leri azaltiriz.
+cok hizli avantaji, lementler daha akiskan bir sekilde dom a yaziliyor.
+google seo acisindan biraz problem
+react sayfalari dogrudan indexlenmez. asilabilir ama ugrasmak gerekir.
+düz js ye göre ögrenmesi biraz daha zor.
+react da sayfalar default olarak üste cikmaz
+
+
+özellikle dinamik ve yüksek veri icieren ortamlar icin react kullanisli
+
+cok dinamik yoksa vanille js ile de yapilabilir
+
+
+react ,  component based and fast bir library dir.
+
+component, icinde kendine eözel html css ve js i var.
+bunu bir kere yazariz mesela register olma saglayan bir component
+vue angular ve react in en önemli özelligi component based olmasi
+lego lar gibi. cocuklar birlestirir
+
+bir component i baska bir component icinde kullanabilirz
+bir kere yaz istedigin kadar cagir kullan
+componentler parametrik olabilir
+girdiler farkli oldukca mesela buton bir yerde yesil bir yerde sari oluyor
+
+
+
+component böl parcalanin bir üst seviyesidir
+
+
+react uses ES6 and babel
+react kullanmak icin modern js bilmek gerekir
+
+
+
+
+es6 kulllaninca eski browser larda sikinti cikabilir
+bu nedenle babel gibi compiler kullanillir
+buuna transpiler da denir
+yüksek versiyonlu bir js yi düsük versiyonlu ya cevirir
+
+
+babeljs nin kendi sayfasi var
+burada sol tarafa yeni kod yaz 
+sagda eski olur
+bu sayfada ie internet explorer demek
+
+
+react kullaninca biz bunu düsünmüyoruz kodumuz su browser da calisir mi diye
+react bunu otomatik yapiyor
+babel i developer kendi de yapabilir
+ama paket indirecegiz react bunu arka planda eski versiyona cevirecek
+
+
+
+
+disagn pattern
+tasarim sablonu
+bir tasarim metodolojisi
+60 70 li yillarda tasarimsal yöntemler teklif edilmis
+nasil bir proje baslatilir nasil effectiv devam ettirlir
+nasil kisa sürede tamamlanir
+bu sorulara cevap
+
+
+hangi disagn pattern yöntemlerini biliyorsunuz
+interview sorusu
+en azindan teorik kücük örneklerle
+
+
+mvc disinda en cok  bilinenler
+singular pattern
+dry 
+solid pattern
+
+mvc  (model view controller)
+burada proje 3 temel katmana bölünür
+model db tarafi backend tarafi
+
+controller da aslinda backend dahil.
+model den gelen veriyi view tarafina verir
+
+view ise isin UI tarafi
+app in disariya bakan yüzü
+user in muhattap oldugu
+view den gelen ham verilerde controller dan gecip model a gider
+
+react vue angular  view katmaninda calisir
+django ise model ve controller da calisir
+django da framework
+
+
+
+layer lara bölmenin arti tarafi;
+proje güncellenecegi zaman, mesela react kullanimdan kalkti bu duurmda sadece view tarafi söküp yerine yeni bir view katmani konulur. bu nedenle mvc cok kullanisli
+
+model controlle ve view altinda alt katmanlar olabilir
+
+
+
+vue js i google dan ayrilmis bir developer kendisi gelistiir
+amac react dan esinleniyor ve daha basit bir sey gelistirmek istiyor.
+junior icin ögrenmesi daha kolay
+
+
+vue js ismi nereden gelir
+dejavue
+deja: already
+vue: seen/view
+fransizca da vue görmek fiili
+
+
+
+react developer tools farkli amaclar icinde kullanilir
+mesela debug
+
+
+
+
+
+
+component konsepti web development in gelecegi olarak görülür
+
+
+vanille js (vanille sade)
+pure js 
+adamin birisi bir library yaptim diye insanlari kandiriyor ama pure aslinda
+yani normal js size yeter demek istiyor.
+
+
+artilarindan biri de benzer kodlarla  react native
+learn once, write everywhere  mottosu
+
+open source
+ve facebook oldugu icin güclü bir community
+
+
+native ile browser da degil tel de calisan app oldugu icin native biraz farkli ama temel cati ayni
+
+
+jsx:  js ve xml den gelir
+html kodlari js icinde dogrudan yazilir
+
+
+
+normal js de innerhtml kulanilir. react da jsx
+innerhtml in security problemleri var eval gibi
+.innerhtml in sagindaki kodlari sorgusuz sualsiz calistirir
+hacker lar bunun sagina bir script yazip tokenlari alabilir
+xss saldirilari diye birsey var
+xross site scripting
+jsx ile bu saldirilara karsi koruma saglar
+
+jsx
+yazmayi kolaylastirir
+innerhtml ve ekstra dan html kodu yazmaya gerel kalmaz
+
+typely coupling loosly coupling
+birbirine siki sikiya bagli gevsek bagli
+biz jsx yazsak da arka planda bunlar js v ehtml e dönüstürülür
+
+seperate concern diy ebi konu var  karmasik
+
+
+
+
+
+
+react creates a virtual dom in memory
+normal dom un user in ram belleginde saklanmis haline denir.
+normal dom islemleri maliyetli zaman kaybi
+her degisikligi normal dom a yazmak cok zaman kaybi
+büyük projelerde sikinti
+
+
+
+react only changes what needs to be changed
+
+
+
+virtual dom mülakat da cikar
+react in özelliklerini aciklayin da gelir
+
+
+
+
+
+normal dom da document dan asagi ne varsa bir kopasini olusturur virtual a atar.
+bir degisiiklik mi oldu,  bu updated virtual dom da yapilir
+buradaki degisiklikler virtual dom ile kiyaslama yapar.
+difference adinda algoritma
+kiyaslamadan sonra normal dom da sadece ilgili componentler güncellenir.
+
+
+difference farkliliklari belirle ve badge yani toplu sekilde dom u günceller.
+bu virtual dom ve diff algoritmasi react in akiskanligini saglayan cok önemli
+
+
+
+en cok layout degisimleri width height degisimleri render i zorunlu kilar
+
+
+bazen tüm sayfanin render edilmesi de gerekebilir
+
+
+react yapay zeka ile gelistirilmedigi icin
+developer in da birsey ler yapmasi gerekir daha az render icin
+
+
+
+state
+hook
+gibi seylerle developer neyin güncellenmesi gerektigini belirler
+yani elementimizin static yada dinamic oldugunu belirtiyoruz react a
+
+stateleri düzgün kulllnaamk 
+hiyerarsiyi olusturmak bizim görevimiz
+
+
+rendering i azaltarak sayfalarin gecikmesini azaltiriz 
+
+
+node js bir environment yani ortamdir 
+bir library yada framework degildir.
+bu env de herkes istedigini yapabilir 
+mesela bir university 
+herkes orada istedigini okur 
+
+node sayesinde browser da yaptiklarimiiz local ded de yapariz 
+
+npm  node package manager 
+nodde daki app lerin manager i 
+yani app store gibi 
+
+
+
+
+For windows users (thanks to @Lars) use this lib:
+Open powershell as administrator and run:
+
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+
+npm install --global --production npm-windows-upgrade
+
+npm-windows-upgrade --npm-version latest
+
+
+
+npm bizim node js de yüklü gelir 
+node -v 
+npm -v 
+
+node güncellendiginde bazen npm güncellenmiyor bu nedenle bir uyari veriyor 
+yukaridaki kod ile node un versiyonu zorla güncelledik 
+
+
+node js default store npm 
+yarn ise react tarafindan gelistiirldi
+
+
+
+npm i -g yarn
+
+yarn -v yada 
+yarn --version 
+
+calismadigi durumlarda cmd command editörüne sag tikla admin olarak ac diyoruz 
+
+
+bu komutlar git bash de de calisir .
+
+https://create-react-app.dev/      webpage 
+
+
+npx create-react-app first-react-app
+
+
+
+node modules 240 gb civarinda
+gitignore da yer alir 
+
+
+npm install projeyi yeniden kurar yani node modules 
+
+cd first-react-app 
+npm start 
+yarn start 
+
+
+ctrl c   projenin calismasini durdurur
+
+package json manager gibi 
+projenin tüm özeti 
+projede bulunan tüm hersey
+
+
+yarn add axios
+npm i axios 
+npm install axios 
+
+
+
+birden cok proje ic ice ise alttakinde .git silinir 
+
+
+github dan indirilen project icin yarn install 
+
+
+

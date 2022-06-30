@@ -1,0 +1,53 @@
+lifecycle react ile ortaya cikiyor
+ve class component lar ile ilgilidir ama func larda da kullanilir
+class component ler ile özdeslesmis bir kavram. türevlerini func component lar ile kullanmaya calisiyoruz.
+zamanlamayi ayarlamak icin de kullanilir (useeffect)
+
+birsey olduktan sonra sunu yap diyecegimiz zaman lifecycle methodlari kullanilir
+component olusturulduktan sonra basindan gecen hersey 
+
+Bu methodla rile developer sistemini daha kolay idare eder.
+
+react da component yapisi olmasi render lar daki gereksiz gecikmeleri engeller
+
+mounting : olusturulma, baglanma, component in dom tree ye eklenmesi, dom a basilmasi
+    constructor : 
+    ilgili class in degiskenlerini objectlerini olusturur. 
+    bir component in state inin baslangic degeri constructor icinde verilir.
+    kendi yazdigimiz func lari class a baglamak icin bind burada yapilir.
+    biz class lari react dan inherit ederiz.
+    mounting sürecinde ilk calisan method constructor
+
+    render: biz bir sira belirlesek de react buradaki siraya göre calistirir.
+    yasam döngüsünde birden cok kez calisabilir.
+    
+
+    componentDidMount : ilk render dan sonra bir func calismasini istiyorsak o zaman burasi kullanilir. mesela sayfa her refresh yapildiginda api den veri cekmek istiyoruz.
+    api den veri cekme burada yapilirsa su garanti edilir. tüm hersey dom a basilir ondan sonra api den veri cekilir. yani didmount bize, sadece yasam döngüsü boyunca bir kere calisir. mesela dogumdan sonra bebege isim verme olayi. 
+    bir component dom treee ye eklenir eklenmz calisir bu func.
+    mesela api den veri cekme islemi icin en güzel yer (cünkü bir kere calisir. sürekli istek yapmak maliyetli)
+    bunun karsiligi useEffect 
+
+
+updating : uygulamada state varsa state degistiginde update edilir.
+
+    render: her state degistiginde.   pure bir method dur. sadece dom da olmasi gereken seyler de kullanilir. state degistiginde bunlari algila ve dom a bas.  bunun icin render her yerde kullanilmaz.
+
+    componentDidUpdate : her render sonrasinda ekstra birseyler yaptirmak icin. Bunun render dan farki;  ilk render dan sonra calismaz. ama ilk render lardan sonra ihtiyac olursa kullaniriz. render dan farkli;  her yerde kullanilabilir.
+    update islemi meydana geldikten hemen sonra calisir.
+    icine prevProps yada sonraki props lari alabilir ve böylece degisimler yakalanabilir.
+    Bunun icinde state güncellenebilir ama condition kullanmak zorundayiz yoksa sonsuz döngü olur.
+    yani ilk render haricinde her render da calisan func dir diyoruz
+
+unmounting : ölme kaldirilma  
+componentWillUnmount:
+bir component dom tree den kaldirilmadan hemen önce birsey yapmak istersek.
+dikkat kaldirildiktan sonra degil.
+set interval ile bir timer baslattik. component öldügünde durdurmazsak bosuna bellek yer.
+
+
+3 ana asama var.
+
+
+react da local storage kullanilabilir. local dan veriler alinip kullanilacak en iyi yer didmount 
+
