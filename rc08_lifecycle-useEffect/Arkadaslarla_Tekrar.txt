@@ -1,0 +1,30 @@
+
+lifecycle ile bir component in dogum gelisme ölüm her anini yakalayabiliyoruz.
+
+class yapisindaki evrelerin karsiligi olarak func da degisiklikleri hooklar ile yakaliyoruz.
+
+hooklar if yapisi icinde kullanilmaz
+return üzerinde kullanilir yani top level. cünkü component in diger yerlerinde kolaylikla cagrilir.
+
+func larda [state]  seklinde yazilan update, ayni zamanda mount da da calisir.
+ilk mount da calisir daha sonra sadece update lerde calisir.
+
+eger  [] kullanmazsak update de tüm degisiklikleri yakalar 
+ama [] icine bir state yazarsak o zaman sadece o state degistiginde update calisir tüm state ler degistiginde calismaz 
+
+didmount ile willunmount ayni useEffect icinde kullanilabilir. ayni useeffect icinde [] ile didmount,  return ile de willunmount kurariz. ikisi farkli farkli calisabilir. 
+ölme isleminde []  calismaz.
+
+Tek bir useEffect icinde ücü de calistirilabilir.
+
+github react ile yapilmamis. her siteyi react ile yapmak mantikli degil 
+twitter da sürekli degisiklk oluyor. o react ile. github da cok degisiklik yok anlik 
+twitter da her anlik degisiklikte sayfa komple render edilmemeli
+
+memoryleak
+
+https://github.com/fatihcaliss   fatih hoca 
+
+jhon smilga
+component ici icin state disi icin useEffect 
+
