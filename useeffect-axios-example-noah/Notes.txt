@@ -1,0 +1,19 @@
+
+vercel ve netlify backend deployuna imkan vermez.
+heroku kullanilir
+
+heroku 500 mb a kadar izin verir
+
+## tüm kütüphaneler tek komut ile eklenebilir. npm de de calisir
+yarn add axios bootstrap react-icons 
+
+react veri akisi yukaridan asagi
+
+global state react in yapisini bozar. zorunlu degilsek kullanmamak gerekir.
+
+addtutorial da yaptigimiz degisiklik,  eger sayfayi refresh etmezsek tutoriallist de görünmez
+sayfayi güncellemek iyi degil. Bu nedenle state degisikligi ile yeni veriyi her degisiklikte cekmek gerekir.
+veriler üst component yani home cekilir, bu nedenle propslar ile güncelleme yapilir.
+
+Postman de yaptigimiz sorgulari save ile kayit ederiz daha sonra sadece tiklamamiz yeterli.
+

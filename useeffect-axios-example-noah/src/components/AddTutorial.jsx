@@ -1,13 +1,20 @@
 import { useState } from "react";
 
-const AddTutorial = () => {
+const AddTutorial = ({addTutorial, getTutorials}) => {
+  console.log(addTutorial);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
 
+    /// value lar bir degiskene bagli oldugu icin e.target.reset yemiyor.
   const handleSubmit = (e) => {
-
+    e.preventDefault()
+    addTutorial({title : title, description : desc})
+    setTitle("");
+    setDesc("");
+      /// sayfayi hard olarak güncelleme:
+    // window.reload()
   };
-
+    // event form un submit ine yada submit butonu onclick e eklenebilir ama forma eklemenin güzellikleri var. form validation otomatik yapar. anchor ile koordine
   return (
     <div className="container text-center mt-4">
       <h1 className="display-6 text-danger">Add Your Tutorial</h1>
