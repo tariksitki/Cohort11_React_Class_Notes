@@ -40,10 +40,38 @@ const Home = () => {
     getTutorials();
   }
 
+    ////////  delete :
+    // delete islemi icin url sonuna id numara giriyoruz.
+  const deleteTutorial = async (id) => {
+    try {
+      await axios.delete(`${url}/${id}`)
+    } catch (error) {
+      console.log(error);
+    }
+    getTutorials();
+  }
+
+
+    //////////  update: (put(tamami, whole update), patch (partial update)):
+    // put da bazi alanlari bos birakirsak, o alanlar undefined olur. 
+    // filter ve map bize bir array return eder.
+    // array leri tranformation yapmak icin map kullandik
+    // filter ile sectik map ile güncelledik.
+  const updateTutorial = async (id, title, desc) => {
+    const filteredData = tutorials.filter((item) => item.id === id).map(() => ({title:title, description : desc}))
+    console.log(filteredData);
+    try {
+      await axios.put(`${url}/${id}`, filteredData[0]) // veriyi array den kurtardik
+    } catch (error) {
+      console.log(error);
+    }
+    getTutorials();
+  }
+
   return (
     <>
       <AddTutorial addTutorial = {addTutorial} />
-      <TutorialList tutorials = {tutorials} />
+      <TutorialList tutorials = {tutorials} deleteTutorial = {deleteTutorial} updateTutorial = {updateTutorial} />
     </>
   );
 };

@@ -1,8 +1,11 @@
-import { FaEdit } from 'react-icons/fa';
-import { AiFillDelete } from 'react-icons/ai';
+import { FaEdit } from "react-icons/fa";
+import { AiFillDelete } from "react-icons/ai";
+import EditTutorial from "./EditTutorial";
 
+// app.css de cursor-pointer diye class yaptik
+// role='button'  bootstrap otomatik yapar.
 // diger taraftan acilmis gönderirsek burada {id, title} seklinde yakalamaliyiz.
-const TutorialList = ({tutorials}) => {
+const TutorialList = ({ tutorials, deleteTutorial, updateTutorial }) => {
   console.log(tutorials);
 
   return (
@@ -27,14 +30,27 @@ const TutorialList = ({tutorials}) => {
                 <td>{title}</td>
                 <td>{description}</td>
                 <td className="text-center">
-                  <FaEdit size={20} className="me-3 text-warning " />
-                  <AiFillDelete size={22} className="text-danger" />
+                  <FaEdit
+                    data-bs-toggle="modal"
+                    data-bs-target="#edit-modal"
+                    size={20}
+                    className="me-3 text-warning "
+                    onClick={() => updateTutorial(id, title, description)}
+                  />
+                  <AiFillDelete
+                    size={22}
+                    className="text-danger cursor-pointer"
+                    onClick={() => deleteTutorial(id)}
+                  />
+                  {/* ayni süslü parantez icinde id var  */}
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
+
+      <EditTutorial />
     </div>
   );
 };
