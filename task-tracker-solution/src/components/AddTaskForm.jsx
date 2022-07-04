@@ -1,14 +1,23 @@
 import { useState } from "react";
 
-const AddTaskForm = ({tasks}) => {
+const AddTaskForm = ({ tasks, setTasks }) => {
   // baslangic degeri veriyoruz uncontrolled uyarisi almamak icin
   const [task, setTask] = useState("");
   const [day, setDay] = useState("");
 
   console.log(tasks);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const id = new Date().getTime();
+    const newTask = { id, task, day, isDone: false };
+    // const newTask = {id : id, task : task, day : day, isDone : false}
+    setTasks([...tasks, {newTask}]);
+    setTask("");
+    setDay("");
+  };
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="task">Task</label>
           <input
@@ -18,6 +27,7 @@ const AddTaskForm = ({tasks}) => {
             placeholder="Add Task"
             value={task}
             onChange={(e) => setTask(e.target.value)}
+            required
           />
         </div>
 
@@ -29,6 +39,7 @@ const AddTaskForm = ({tasks}) => {
             id="day"
             value={day}
             onChange={(e) => setDay(e.target.value)}
+            required
           />
         </div>
         <div>

@@ -3,7 +3,7 @@ import AddTaskForm from "./AddTaskForm";
 
 // burada tasks hic kullanmadik sadece iletme islemi yaptik. Buna prop drilling denir.
 
-const Header = ({tasks}) => {
+const Header = ({ tasks, setTasks }) => {
   const [show, setShow] = useState(false);
   const [btnStyle, setBtnStyle] = useState({
     name: "SHOW ADD TASK BAR",
@@ -42,7 +42,7 @@ const Header = ({tasks}) => {
       >
         {btnStyle.name}
       </button>
-      {show && <AddTaskForm tasks = {tasks} />}
+      {show && <AddTaskForm tasks={tasks} setTasks={setTasks} />}
     </header>
   );
 };
