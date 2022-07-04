@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const AddTutorial = ({addTutorial, getTutorials}) => {
-  console.log(addTutorial);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
 

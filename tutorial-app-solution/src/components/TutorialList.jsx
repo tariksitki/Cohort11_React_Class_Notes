@@ -1,12 +1,16 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import EditTutorial from "./EditTutorial";
+import { useState } from "react";
 
 // app.css de cursor-pointer diye class yaptik
 // role='button'  bootstrap otomatik yapar.
 // diger taraftan acilmis gönderirsek burada {id, title} seklinde yakalamaliyiz.
 const TutorialList = ({ tutorials, deleteTutorial, updateTutorial }) => {
-  console.log(tutorials);
+
+    // map icindeki veriyi baska bir yerde gönderebilmek icin state 
+    // burada state kullanmasaydik, verimiz static olurdu degismezdi.
+  const [editItem, setEditItem] = useState("");
 
   return (
     <div className="container mt-4">
@@ -29,13 +33,13 @@ const TutorialList = ({ tutorials, deleteTutorial, updateTutorial }) => {
                 <th>{id}</th>
                 <td>{title}</td>
                 <td>{description}</td>
-                <td className="text-center">
+                <td className="text-center text-nowrap">
                   <FaEdit
                     data-bs-toggle="modal"
                     data-bs-target="#edit-modal"
                     size={20}
-                    className="me-3 text-warning "
-                    onClick={() => updateTutorial(id, title, description)}
+                    className="me-3 text-warning cursor-pointer"
+                    onClick={() => setEditItem(item)}
                   />
                   <AiFillDelete
                     size={22}
@@ -50,7 +54,7 @@ const TutorialList = ({ tutorials, deleteTutorial, updateTutorial }) => {
         </tbody>
       </table>
 
-      <EditTutorial />
+      <EditTutorial updateTutorial={updateTutorial} editItem={editItem} />
     </div>
   );
 };
