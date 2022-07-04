@@ -59,7 +59,6 @@ const Home = () => {
     // filter ile sectik map ile güncelledik.
   const updateTutorial = async (id, title, desc) => {
     const filteredData = tutorials.filter((item) => item.id === id).map(() => ({title:title, description : desc}))
-    console.log(filteredData);
     try {
       await axios.put(`${url}/${id}`, filteredData[0]) // veriyi array den kurtardik
     } catch (error) {

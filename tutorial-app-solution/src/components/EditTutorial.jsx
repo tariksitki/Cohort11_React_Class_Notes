@@ -1,19 +1,44 @@
-import React, { useState } from "react";
+//? https://reactjs.org/docs/hooks-reference.html#usestate
+//! State degiskeninin degeri, 1.render ile initialState
+//! parametresinin ilk degerini alir. Dolayisiyle bu durumda
+//! prop'tan gelen ilk deger state'e aktarilir.
+//! Sonradan degisen props degerleri useState'e aktarilmaz.
+//! Eger props'tan gelen degerleri her degisimde useState'e
+//! aktarmak istersek useEffect hook'unu componentDidUpdate
+//! gibi kullanabiriz.
+
+// controlled uncontrolled hatasi icin  value={title || ""}
+// bir inputun degeri undefined olmamali. react uyari verir.
+
+import React, { useEffect, useState } from "react";
 
 // modal js tabanli calisir. yani bir tusa tiklaninca acilir.
 
 const EditTutorial = ({ updateTutorial, editItem }) => {
-  const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
+  const { id, title: newTitle, description } = editItem; // isim degisikligi
 
-  const handleSubmit = (e) => {
+  const [title, setTitle] = useState(newTitle);
+  const [desc, setDesc] = useState(description);
+  // propsla gelen eski degerleri initial yaptik.
+  // Önemli:  During the initial render, the returned state (state) is the same as the value passed as the first argument (initialState).The setState function is used to update the state. It accepts a new state value and enqueues a re-render of the component. Yani normalde edit butonuna basmadigimiz sürece title isimli state in ici bos. Bu nedenle useState ilk render esnasinda bos return eder. Bu nedenle useEffect kulanmak zorundayiz ve böylece iki state imizde degisiklik oldugunda, edit icin kullandigimiz modal de verilerimizin instance olarak cikmasini sagliyoruz.
+  // bir state i miz var ve bu state degerini props dan aliyor.
+
+  // bu kez formun submit özelligini kullanmayacagiz kendimiz button a özellik verdik
+  const handleSave = (e) => {
     e.preventDefault();
-    updateTutorial({ title: title, desc: desc });
+    updateTutorial(id, title, desc);
     setTitle("");
     setDesc("");
     /// sayfayi hard olarak güncelleme:
     // window.reload()
   };
+
+    // üst component da newtitle ve desc her degistiginde biz buradaki locak state imizi güncelliyoruz.
+  useEffect(() => {
+    setTitle(newTitle);
+    setDesc(description);
+  }, [newTitle, description]);
+
   return (
     <div>
       <div className="modal" tabIndex="-1" id="edit-modal">
@@ -39,7 +64,7 @@ const EditTutorial = ({ updateTutorial, editItem }) => {
                   className="form-control"
                   id="title"
                   placeholder="Enter your title"
-                  value={title}
+                  value={title || ""}
                   onChange={(e) => setTitle(e.target.value)}
                   required
                 />
@@ -53,7 +78,7 @@ const EditTutorial = ({ updateTutorial, editItem }) => {
                   className="form-control"
                   id="desc"
                   placeholder="Enter your Description"
-                  value={desc}
+                  value={desc || ""}
                   onChange={(e) => setDesc(e.target.value)}
                   required
                 />
@@ -70,7 +95,8 @@ const EditTutorial = ({ updateTutorial, editItem }) => {
               <button
                 type="button"
                 className="btn btn-primary"
-                data-bs-dismiss="modal"
+                onClick={handleSave}
+                data-bs-dismiss="modal" // onclick altinda olmali
               >
                 Save
               </button>
