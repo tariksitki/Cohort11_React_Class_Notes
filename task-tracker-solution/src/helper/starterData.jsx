@@ -1,3 +1,5 @@
+
+// json : array icinde object
 const starterData = [
   {
     id: 1,
