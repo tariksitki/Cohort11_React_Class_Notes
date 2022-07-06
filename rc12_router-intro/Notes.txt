@@ -4,5 +4,31 @@ next js sadece bir router degil . icinde server side ve client side rendering de
 
 next js bir  framework dur. framework un kendine has bir yapisi vardir bizi onu kullanmaya zorlar. ama react bir library bizi zorlamaz. router icin ne kullanmak istersen onu kullan der. 
 
+client server a talep de bulundugunda, server html css ve js i text dökümani halinde gönderir. bizim pc miz üzerindeki browser larda bu dökümanlar parse edilir. yani derlenebilir hale getiriliyor. 
 
+eskiden server side rendering: tüm html css js server da parse edilirdi. linkl lerin hepsi server icinde vardi. about istersek bize about verir. home istersek home verir. klasik yöntem bu hersey server tarafindan yönlendirilir. client sürekli server ile irtibat halinde. bu performansi düsürür. 
+
+Bu nedenle client side routing ve rendering olusturuldu. server client a dosyalari zip lenmis gibi gönderiyor. parse edilmemis dökümanlar gönderiyor. asil olarak client in browserinda acilip parse ediliyor. 
+
+routing yaparken sayfa refresh edilmez. 
+react router devre disi birakilirsa her routing de refres yapilir. 
+
+single page web app ile server artik tüm verileri kendisinde tutmuyor. 
+
+client side in avantaji hiz. local de cok hizli calisan web page ler 
+dezavantaj: eski sistemde google gibi arama motorlari daha iyi indexleme yapiyordu. kodlari  tarayip hemen indexleyebiliyordu. 
+ama simdi arama motorlarinin server a gitmesi yeterli degil. cünkü burada acilmamis kodlar ham verler var. bu nedenle arama motoru birde client side a gider. 
+bu is arama motorlari icin ciddi problem. 
+
+Bunun icin kütüphaneler var. google in ihtiyaci olan verileri bit bu library ile sunabiliyoruz. 
+
+ana sayfasini normal sayfa yapip ic sayfalari react ile yapanlar da vardi. eskiden 
+ama simdi react kendisi cözümler üretiyor. react 18 ile 
+
+react routing in amaci:  normal de react ortaminda hersey single page. biz router ile alt route lar olusturuyoruz ve multiple page e dönüstürüyoruz. 
+
+Eskiden routes icin switch vardi 
+
+e ticaret de biz bir ürüne tiklayinca hemen baska bir sayfa acilir. buna dinamik routing denir. el ile static bir kod yazmiyoruz. program icinde otomatik olusan linkler cok uzun . iste bunlar programsal olarak olusturulan linkler. 
+react router in en önemli özelliklerinden biri bu. dinamic route sectigimiz elemntin id sine göre bir link olusturulur. 
 
