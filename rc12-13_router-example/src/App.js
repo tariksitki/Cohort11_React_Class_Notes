@@ -1,19 +1,26 @@
-import Footer from './components/Footer';
-import MyNavbar from './components/Nav';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Instructors from './pages/Instructors';
-import NotFound from './pages/NotFound';
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Instructors from "./pages/Instructors";
+import NotFound from "./pages/NotFound";
+import InstructorDetail from "./pages/InstructorDetail";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <MyNavbar />
-      <Home />
-      <Instructors />
-      <Contact />
-      <NotFound />
-      <Footer />
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/instructors" element={<Instructors />} />
+          <Route path="/instructors/:id" element={<InstructorDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
