@@ -1,0 +1,8 @@
+
+react router in alternatifi next js dir. 
+next js sadece bir router degil . icinde server side ve client side rendering de bulundurur.
+
+next js bir  framework dur. framework un kendine has bir yapisi vardir bizi onu kullanmaya zorlar. ama react bir library bizi zorlamaz. router icin ne kullanmak istersen onu kullan der. 
+
+
+
