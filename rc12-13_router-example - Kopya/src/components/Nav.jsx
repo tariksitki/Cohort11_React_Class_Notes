@@ -40,6 +40,17 @@ function Nav() {
             >
               Instructors
             </NavLink>
+
+            <li className="nav-item">
+              <NavLink
+                to="/paths"
+                className="nav-link"
+                style={({ isActive }) => ({ color: isActive && "red" })}
+              >
+                Paths
+              </NavLink>
+            </li>
+
             <li className="nav-item">
               <NavLink
                 to="/contact"

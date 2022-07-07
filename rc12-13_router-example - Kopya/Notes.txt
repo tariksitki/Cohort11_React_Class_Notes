@@ -1,0 +1,49 @@
+react router 3. party bir library ama cogu react projesinde kullanilir 
+
+router client side bir library 
+
+hizli bir sekilde rout lari gezmemizi  saglar 
+
+sayfada görünen seylere tiklamak icin link yada navlink  ayni a tagi ile ayni mantik 
+tek fark react router üzerinen calisir 
+
+kod icinde dinamik rout lar olusturmak gerekebilir. mesela kisiye tiklandiginda detaya gitme bunun icin navigate kullan 
+
+navlink link static görünen yerler icin güzel 
+
+link de to kismina degisken alir ama link ile hersey yapilmaz. duragan dir static dir. user ile interaktif olacaksa, yani user gelip tiklayacaksa o zaman link olur. ama useEffect ile bir islem yaptik ve bir yere yönlendirmek isitiyoruz. bu durumda navigate kullanmak zorundayiz. yani bir router i bir func gibi kullanmak istiyorsak navigate 
+
+bir func nerede kullanillirsa navigate orada kullanbiulablir 
+
+mesela onclick parantezi icinde link kullanilamaz. burada user tarafindan degil de programsal olarak bir interaction vardir. 
+
+history.push v5 de vardi. v6 ile navigate geldi ve onun yerini aldi. navigate ile otomatik olarak history ye alinir. biz sadece rout yapiyoruz.
+
+birde Navigate adinda component vardir. 
+
+routes icinde navigate kullanilmaz. bunun icin usenavigate hook u navigate componnet haline dönüstü ve bu kullanilir .
+
+yani biz nerede ne kullanmamiz gerekirse adamlar ona göre element gelistirmisler 
+
+hepsinin kullanim yeri farkli hicbirinden vazgecemeyiz 
+
+navigate ile yanina veri gönderebiliirz. burada arka planda context api calisir. 
+
+location kullanilinca user direkt link adresini girerse aradaki component lar atlandigi icin veri gelmez. bu dezavantajidir
+location kullanildiginda alt component d atekrar fetch yapmayiz cünkü veri location ile gelir. 
+
+ama params ile gönderince tekrar fetch yapilir 
+
+navigate yaninda veri gönderince useLocation ile cekeriz. 
+
+
+fetch de veri bulunamasa da o bize dönüs yapinca basarili sayar 
+tam error handling icin ok mu degil mi bakariz 
+
+fetch optimistic dir. iyimser 
+
+
+nested router:
+üstte sabit bir tab var alttakiler tikladikca degisiyor. 
+bunu nested ile yapariz 
+tüm linkler hepsine tiklandiginda görünüyor sadece tiklananin rengi degismis oluyor. 
