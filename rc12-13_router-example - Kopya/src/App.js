@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Aws from "./pages/Aws";
@@ -60,7 +60,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Route>
 
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
+
+              {/* kullanici valid route lardan baska birsey girerse home sayfasina yönlendir diyoruz. ama instructor detail de kendimiz hatali girilirse notFound a gönder demistik. o nedenle orada notfound a gider. mesela sayi olarak 99 girdigimizde */}
+          <Route path="*" element={<Navigate to={"/"} />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -47,3 +47,23 @@ nested router:
 üstte sabit bir tab var alttakiler tikladikca degisiyor. 
 bunu nested ile yapariz 
 tüm linkler hepsine tiklandiginda görünüyor sadece tiklananin rengi degismis oluyor. 
+
+
+lazy load component seviyesinde yapilabildigi gibi route seviyesinde de yapilabilir. 
+
+sadece elzemler initial load da yüklensin diger leri sonradan yüklensin ki performansi etkilemesin.eger isin icinde performans varsa bu adnavce konudur. 
+bu konuyu ögrenelim. 
+
+inspect actiktan sonra sayfa refresh tusuna basili tut en altta önbelelki bosalt var. 
+
+code splitting yani code lari ayri yapmak.
+bu tarz islemler ve lazy load sayfanin ilk yüklenme süresini kisaltir. 
+
+lazy load route seviyesinde de var kesin bak 
+
+
+Navigate : v5 deki redirect e karsilik gelir. 
+
+normalde klasik sistemlerde redirect i server lar yapar. ama client side da burada biz de yapiyoruz.
+redirect burada büyük harf ile baslayan Navigate ile yapilir. 
+
