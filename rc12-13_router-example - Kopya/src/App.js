@@ -1,11 +1,14 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import InstructorDetail from "./pages/InstructorDetail";
 import Instructors from "./pages/Instructors";
 import NotFound from "./pages/NotFound";
-import InstructorDetail from "./pages/InstructorDetail";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// router sunu yapiyor:  multiple page görünümlü single page yapiyor. a linki ile calisinca tiklayinca baska sayfaya gecer bu multiple. ama react single page. cünkü tek sayfada farkli component lar basilir. 
+// istersek index.js de komple app i sarmalayabilirz geri kalan detayi burada yapabiliriz. 
 
 function App() {
   return (

@@ -1,5 +1,10 @@
-import logo from "../img/logo.png";
+import logo from '../img/logo.png';
 import { Link, NavLink } from "react-router-dom";
+
+// navlink in tek farki, aktif sayfayi gösterir.tiklanan linki kirmizi yapmak istedigimizde kullanabiliriz. 
+// isactive; hangi sayfada isen onu farkli renk yap.
+// Önemli:   isactive i sadece navlink ile kullanabiliriz. eger linkte kullanirsak sayfa hata veriyor.  
+
 function Nav() {
   return (
     <nav className="navbar navbar-expand-md navbar-light">
@@ -19,32 +24,27 @@ function Nav() {
           <ul className="navbar-nav ms-auto mb-2 me-3 mb-lg-0">
             <li className="nav-item">
               <NavLink
-                style={({ isActive }) => ({ color: isActive && "red" })}
                 to="/"
                 className="nav-link active"
                 aria-current="page"
+                style={({ isActive }) => ({ color: isActive && "red" })}
               >
                 Home
               </NavLink>
             </li>
 
+            <NavLink
+              to="/instructors"
+              className="nav-link"
+              style={({ isActive }) => ({ color: isActive && "red" })}
+            >
+              Instructors
+            </NavLink>
             <li className="nav-item">
               <NavLink
-                style={({ isActive }) => ({ color: isActive && "red" })}
-                to="/instructors"
-                className="nav-link"
-                aria-current="page"
-              >
-                Instructors
-              </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink
-                style={({ isActive }) => ({ color: isActive && "red" })}
                 to="/contact"
                 className="nav-link"
-                aria-current="page"
+                style={({ isActive }) => ({ color: isActive && "red" })}
               >
                 Contact
               </NavLink>
