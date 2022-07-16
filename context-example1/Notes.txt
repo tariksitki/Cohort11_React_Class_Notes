@@ -1,0 +1,58 @@
+
+context api  bir global statement  yönetim sistemidir.
+
+redux ve context in genel adi global state management.
+
+redux;  js ve react ortamlari icin kullanilan ekstra bir library. 
+
+dil ayari tema ayari token gibi genel hususlari tutmak icin cok iyi
+
+global state isi basitlestirir ama dezavantajlari da var o nedenle dikkatli kullanmak lazim 
+avantaji global olarak paylasim yapmak 
+
+Dezavantaj:
+1: componentin kullanimini azaltir react in klasik yapisini bozar.
+bir component i bir global state bagladigimiz zaman artik o hep oraya bagli olacak. 
+parametre alarak calisan ve her bir parametreye göre farkli calisan bir func;  sürekli context e bagli olarak calisana göre daha esnektir. 
+react in felsefesi yeniden kullanilabilir component ler kullanmak, context buna ters
+
+2. dezavantaj: accessive rendering e sebep olabilir. globaldeki bir degisim onu kullanan tüm component leri etkiler ve hepsini render eder. o nedenle gereksiz kullanmamak gerekir. 
+
+propslarin elden ele uzatilmasi props drilling denir.
+
+dolmusta elden ele para uzatmak props.  muavin  context api 
+
+props paylasimi one way 
+alternatif olarak navigate ile veri gönderilebilir. 
+
+context api icine hersey atilabilir. object func 
+
+context api native bir cözüm. bu nedenle bunu kullanmak icin birsey kurmamiza gerek yok. redux ise 3. party bir yazilim 
+redux klasik js ile de kullanilabilir ve daha eski 
+
+context daha pratik daha kolay daha az kod yükü var. ama proje büyüdükce context yetersiz kaldigi icin redux kullanilir 
+
+redux in tool lari var bu nedenle debug yapmak kolaylasiyor. 
+
+context in avantaji harici degil dahili. Bu nedenle kurulum yapmaya gerek yok. kurulum zaman alir 
+
+interview: props drilling nedir bu problem nasil cözülür? (global state ile cözülür)
+
+
+
+
+context api kullanma adimlari:  *********************
+
+1: create Context (bunun icin createContext kullanilir)
+2: Provider ile sarmalama ()
+3: consume (burada kullanma islemine teknik olarak consume denir.) tüketmek icin useContext hook u kullanilir 
+
+
+context baska bir jsx dosyasinda olusturuldugu icin export gerekir 
+
+context ile tüm app i sarmalamak zorunda degiliz. istersek 3  5 tane component i de sarmalayabiliriz. 
+
+global state kullandigimizda local state de kullanilabilir 
+
+en effective cözüm su: sadece globaller global den gelsin diger leri local den gelsin.
+
