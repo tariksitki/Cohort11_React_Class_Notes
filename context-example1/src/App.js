@@ -1,14 +1,18 @@
-import { useState } from 'react';
-import StudentList from './components/StudentList';
-import data from './data';
+import { useState } from "react";
+import StudentList from "./components/StudentList";
+import { StudentContext } from "./context/StudentContext";
+import data from "./data";
 
 function App() {
   const [students, setStudents] = useState(data);
 
   return (
-    <div>
-      <StudentList students={students} />
-    </div>
+    // value gönderiminde cift {} kullanilir
+    <StudentContext.Provider value={{ students, setStudents }}>
+      <div>
+        <StudentList students={students} />
+      </div>
+    </StudentContext.Provider>
   );
 }
 export default App;
