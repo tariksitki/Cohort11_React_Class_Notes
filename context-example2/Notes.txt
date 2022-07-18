@@ -1,0 +1,16 @@
+
+Context api icin yaptigimiz bu ikinci örnegin birincisinden tek farki var:
+Birinci de context farkli bir dosyada olusturuldu ve export import yaptik. Burada ise create context,  provider ve consume hepsi ayni dosya icinde yapildi ve bu nedenle export import yapmadik. 
+
+Önemli:
+
+Birinci örnekte:  context dosyasinda sadece create islemi yaptik. 
+Ikinci olarak Provider ile sarmalam islemini app.js de yaptik ve value verme islemini yine app.js de yaptik. yani app.js deki local state i provider a value olarak verdik.
+Ücüncü olarak ise; nerede consume gerekiyorsa orada useContext kullanarak; app.js den gönderdigimiz value lari orada yakaladik. 
+
+
+Ikinci örnekte ise: bir dosya icinde kullanima hazir bir context olusturduk. 
+value sunu burada verdigimiz icin app.js de value verme ihtiyaci kalmadi. 
+consume islemi de ayni dosya icinde yapildigi icin bu context e ihtiyac dusydugumuz yerde sadece tanimladigimiz consume func ini cagirdik. 
+sarmalama islemi de yine app.js de yapildi ancak farkli olarak sadece UserContextProvider ile sarmalama yaptik.  .Provider kullanmadik.
+
