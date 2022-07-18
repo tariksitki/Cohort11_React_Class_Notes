@@ -1,0 +1,10 @@
+
+array reduce methodu ile useReducer farkli seylerdir. 
+reduce methodu array i iterate eder. 
+
+useReducer ise birden cok state i tek bir state e indirgeyip tek bir yerden kontrol etme imkani saglar. 
+
+5 tane 10 tane state imiz olabilir. reducer bize bunlarin hepsini paket haline getirme ve hepsini paket seklinde degistirme imkani verir. hepsini birlestirip tek bir object haline getirir. 
+
+
+
