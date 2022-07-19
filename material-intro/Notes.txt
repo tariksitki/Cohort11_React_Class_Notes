@@ -1,0 +1,75 @@
+
+Mui installation adimlari:
+
+1: yarn add @mui/material @emotion/react @emotion/styled
+
+2: styled componnet kullanmak istersek 
+ yarn add @mui/material @mui/styled-engine-sc styled-components
+
+3: index.html de roboto
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
+
+4: icon lar cdn olarak da kullanilabilir ama install icin
+
+yarn add @mui/icons-material
+
+(mui ile birlikte react icons tarzi seylerde kullanilabilir. ama mui iconlarini kullanmak istiyorsak buradaki icon yüklemelerini yapmak mecburi)
+
+******  eger icon lari cdn olarak kullanmak istersek su linkteki örnegi uygulayabiliriz. Bu linkte tüm baglantilar cdn olarak yapilmis. 
+
+https://github.com/mui/material-ui/blob/master/examples/cdn/index.html
+
+** eger cdn olarak kullanilirsa iconlar;  bu durumda component seklinde kullanmiyoruz bunun yerine su sekilde kullanilir:
+
+          <SvgIcon {...props}>
+            <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" />
+          </SvgIcon>
+
+
+---------------------------------------
+
+- Mui de hersey bir component dir.
+
+- mui de iki tane engine var. bir tanesinde styled component var ve arka planda bizim styled da hazirlaigimiz gibi hazir component lar var. bizde bunlari alip kullaniyoruz. 
+
+Note: codesandbox:  react ve vue gibi programlar icin online code yazma sitesi
+
+-- mui de hersey bir component dir 
+
+
+-- ******** Hangi component da hangi proplari kullanabilecegimizi o component in en altinda bulunan api kisminda görebiliriz. 
+
+
+-- inline styling sx ile verilir. versiyon 5 ile geldi. 
+
+-- component leri import ederken iki yöntem var. birincisi {} ile import ikincisi {} kullanmadan direkt nokta atisi import 
+
+-- mui de class name ler unique olarak otomatik verilir. 
+
+-- variant style ile ilgilidir. component in görünümünü belirler. component ise bunun dom icinde ne olarak görünecegini belirler. inspect yapip baktigimizda, component de ne yazdiysak onu görürüz. 
+-- SEO da h1 elementi önemlidir. O nedenle bir tane olur. biz h1 görünümünde olan h3 olusturabiliriz bu sekilde 
+
+-- typography de variant tipi olarak sunlari kullanabiliriz:
+'body1'
+| 'body2'
+| 'button'
+| 'caption'
+| 'h1'
+| 'h2'
+| 'h3'
+| 'h4'
+| 'h5'
+| 'h6'
+| 'inherit'
+| 'overline'
+| 'subtitle1'
+| 'subtitle2'
+| string
+
+
+-- renk seceneklerini palette de görebiliyoruz. 
+-- herbir rengin 3 versiyonu var. error error.light error.dark 

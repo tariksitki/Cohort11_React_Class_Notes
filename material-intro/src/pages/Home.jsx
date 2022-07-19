@@ -1,3 +1,5 @@
+
+import ButtonBases from '../components/ComplexButton';
 import TypoButtons from '../components/TypoButtons';
 
 const Home = () => {
@@ -5,6 +7,7 @@ const Home = () => {
     <>
       <h1>HOME</h1>
       <TypoButtons />
+      {/* <ButtonBases /> */}
     </>
   );
 };
