@@ -73,3 +73,15 @@ Note: codesandbox:  react ve vue gibi programlar icin online code yazma sitesi
 
 -- renk seceneklerini palette de görebiliyoruz. 
 -- herbir rengin 3 versiyonu var. error error.light error.dark 
+
+
+-- Responsive tasarim icin grid ile daha hassas bir düzenleme yapabiliyoruz. 
+-- flex ile de yapabiliyoruz. 
+
+
+
+*****************    THEME:
+
+Customization altinda Default Theme var. 
+Burada mui e ait standart renk ve boyut gibi veriler bulunmaktadir. 
+
