@@ -1,13 +1,16 @@
 
+import CardsGrid from '../components/CardsGrid';
 import ButtonBases from '../components/ComplexButton';
+import TextField from '../components/TextFieldComponent';
 import TypoButtons from '../components/TypoButtons';
 
 const Home = () => {
   return (
     <>
-      <h1>HOME</h1>
-      <TypoButtons />
+      {/* <TypoButtons /> */}
       {/* <ButtonBases /> */}
+      {/* <TextField /> */}
+      <CardsGrid />
     </>
   );
 };
