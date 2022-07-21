@@ -1,0 +1,41 @@
+Redux
+
+Third party bir library
+kurulum gerekir dependency gerekir 
+
+redux gelistiricisi ayni zamanda react ekibinde de var
+redux neredeyse react in official third party kütüphanesi gibi
+
+global state management kütüphanesidir ************
+redux sifirdan yazilmis degil. Flux ve Elm den esinlenilmistir.
+Dan Abramov tarafindan gelistirildi.
+
+eskiden redux kullanmak zorunlu gibiydi. simdi context alternatif olarak var 
+react in ilk ciktigi zamanlarda baska global state management yoktu 
+bu nedenle redux official gibi olmus 
+
+
+redux;  daha güzel yönetim debugging   tool lari vasitasi ile 
+
+Redux olmadan react kullanilabilir mi (evet)
+
+Redux ve content olmadan prop drilling kullanilir 
+
+burada global saklama alanina context denmez store denir 
+
+context create context ile olusturulurdu 
+
+burada createStore 
+
+context  =>  useContext
+redux => useSelector
+
+context => Context.Provider
+redux => Provider 
+
+Adimlar: 
+
+1: create 
+2: sarmalama
+3: istedigimiz yerlerde kullanma
+
