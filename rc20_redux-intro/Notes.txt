@@ -39,3 +39,49 @@ Adimlar:
 2: sarmalama
 3: istedigimiz yerlerde kullanma
 
+
+redux da da herseyi global de kullanmak dogru degil 
+
+global stateler düzgün kullanilmazsa performansi düsürebilir. Bu tüm global state ler icin gecerlidir sadece redux ixin degil 
+
+Redux is official Redux UI Bindings for React 
+
+
+Kurulum:
+
+yarn add redux react-redux 
+
+
+
+
+
+redux vanilla js de kullanilabilir 
+bu nedenle hem redux hem de react-redux in kurulumunu yapariz 
+
+
+
+view : ui tarafi 
+
+
+
+redux;  context ile reducer in birlesimi olarak görülebilir 
+
+redux da state direkt degistirilmez; dispatch ile degistirilir. setState gibi 
+ui tarafindan degistirme istegi dispatch ile gönderilir 
+
+reducer bu istegi switch case yapisi ile inceler ve ona göre islem yapar 
+ve degistirme islemini reducer yapar 
+
+
+durum makinesi:  reducer a her zaman x verdigimizde y cikmasi lazim. 
+reducer vasitasi ile girdi cikti ayni olmasi hep garanti edilmeye calisilir. 
+
+
+
+ui dispatch ile istek yapar 
+dispatch action lar ile reducer a gönderir
+reducer state i günceller 
+
+
+programcilik temel mevzusu; func lar haline getir cagir kullan 
+
