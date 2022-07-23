@@ -1,0 +1,34 @@
+yüklenmis olan programi güncellemek icin kodlari teker teker güncellemek gerekir. 
+
+yarn ile güncelleme:
+
+yarn upgrade --latest
+
+npm:
+
+npm install -g npm-check-updates
+
+normal redux icin redux ve react-redux yüklenir
+
+toolkit kullanmak icin redux yüklememize gerek yok 
+
+yarn add @reduxjs/toolkit react-redux
+
+
+
+sifirdan proje olustururken redux toolkit tabanli olusturmak icin hazir kod:
+
+npx create-react-app my-app --template redux
+
+bu kod ile olusturunca icinde feature ve app klasörleri hazir geliyor
+icinde bir tane counter örnegi de gelir. 
+
+
+feature icinde redux logic i konulur. 
+app icine store konulur 
+
+
+
+configureStore kullandiysak, redux toolkit otomatik olarak calisir. 
+
+

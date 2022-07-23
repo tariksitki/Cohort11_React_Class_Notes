@@ -7,7 +7,7 @@ const TodoList = () => {
 
   const handleClearList = () => {
     dispatch(clearTodo());  
-  };
+  };  
 
   const todos = useSelector((state) => state.todoReducer.todoList);
 

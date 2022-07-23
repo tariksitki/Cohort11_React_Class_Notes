@@ -10,6 +10,7 @@ import loadingGif from '../assets/loading.gif';
 const News = () => {
   return (
     <>
+      <h1>NEWS</h1>
       <Box
         xs={{ d: 'flex' }}
         display="flex"
@@ -47,3 +48,9 @@ const News = () => {
 };
 
 export default News;
+
+
+
+//  <Box display="flex" alignItems="center" justifyContent="center" height="100vh">
+//    <img src={loadingGif} alt="gif" width="90%" height="800px" />
+//  </Box>;
