@@ -1,7 +1,10 @@
 Redux
 
-Third party bir library
-kurulum gerekir dependency gerekir 
+Bir global state management library dir. 
+
+Third party and external bir library, react icinde bulunmaz.
+kurulum gerekir dependency gerekir.
+Özellikle complex state yönetiminin gerekli oldugu projelerde kullanilir.
 
 redux gelistiricisi ayni zamanda react ekibinde de var
 redux neredeyse react in official third party kütüphanesi gibi
@@ -15,20 +18,21 @@ react in ilk ciktigi zamanlarda baska global state management yoktu
 bu nedenle redux official gibi olmus 
 
 
-redux;  daha güzel yönetim debugging   tool lari vasitasi ile 
+redux;  daha güzel state yönetim ve debugging   tool lari vasitasi ile 
 
 Redux olmadan react kullanilabilir mi (evet)
 
 Redux ve content olmadan prop drilling kullanilir 
 
-burada global saklama alanina context denmez store denir 
+burada global saklama alanina context denmez store denir.
+Global state management mantiginda; state ler global bir saklama alanina atilir ve ihtiyac oldugunda oradan cagrilarak kullanilir.
 
-context create context ile olusturulurdu 
+context createContext methodu ile olusturulurdu 
 
 burada createStore 
 
 context  =>  useContext
-redux => useSelector
+redux => useSelector hook u ile
 
 context => Context.Provider
 redux => Provider 
@@ -42,9 +46,11 @@ Adimlar:
 
 redux da da herseyi global de kullanmak dogru degil 
 
-global stateler düzgün kullanilmazsa performansi düsürebilir. Bu tüm global state ler icin gecerlidir sadece redux ixin degil 
+global stateler düzgün kullanilmazsa performansi düsürebilir. Bu tüm global state ler icin gecerlidir sadece redux icin degil 
 
-Redux is official Redux UI Bindings for React 
+- Redux is official Redux UI Bindings for React 
+- It implements Performance Optimizations for you 
+- Uzun yillardan beri kullanildigi icin güzel bir Community Support var
 
 
 Kurulum:
@@ -55,7 +61,7 @@ yarn add redux react-redux
 
 
 
-redux vanilla js de kullanilabilir 
+redux vanilla js de de kullanilabilir 
 bu nedenle hem redux hem de react-redux in kurulumunu yapariz 
 
 
@@ -66,6 +72,10 @@ view : ui tarafi
 
 redux;  context ile reducer in birlesimi olarak görülebilir 
 
+
+        ******** REDUX IS AKISI:
+
+
 redux da state direkt degistirilmez; dispatch ile degistirilir. setState gibi 
 ui tarafindan degistirme istegi dispatch ile gönderilir 
 
@@ -75,13 +85,21 @@ ve degistirme islemini reducer yapar
 
 durum makinesi:  reducer a her zaman x verdigimizde y cikmasi lazim. 
 reducer vasitasi ile girdi cikti ayni olmasi hep garanti edilmeye calisilir. 
+yani state ler direkt degistirilemez. Her bir state degisimi icin;
+
+dispatch - action - reducer - state    cycle   i izlenmek zorundadir. Bunun sebebi state lerin güvenli bir sekilde degistirilmesini garanti etmektir.
 
 
 
-ui dispatch ile istek yapar 
-dispatch action lar ile reducer a gönderir
+ui tarafi yani kullanici bir event handler ile istegini tetikler.
+dispatch ile istek yapilir 
+dispatch istegi alir ve bunu bir action formatina yani özel bir object formatina dönüstürür.
+action lar bunu reducer a gönderir
 reducer state i günceller 
 
 
 programcilik temel mevzusu; func lar haline getir cagir kullan 
+
+
+- reducer klasörü icinde sadece index.js yazdigimizda sadece .redux klasöründen import eder. sadece importu kisaltma saglar.
 
