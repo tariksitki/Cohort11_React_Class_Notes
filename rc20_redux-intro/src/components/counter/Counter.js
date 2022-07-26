@@ -7,7 +7,7 @@ import "./Counter.css";
 const Counter = () => {
   const dispatch = useDispatch(); // useDispatch () icine birsey almaz.
   const counter = useSelector((state) => state.counterReducer.counter);
-  console.log(counter);
+  // console.log(counter);
   // burada state dedigimiz rootReducer.  rootReducer altinda 2 tane reducer imiz var.
   // state imiz bir object den ibarettir.
 

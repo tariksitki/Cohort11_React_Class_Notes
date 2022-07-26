@@ -3,6 +3,8 @@ import okLogo from '../../assets/ok.png';
 import deleteLogo from '../../assets/delete.png';
 
 const TodoItem = ({ completed, text, id }) => {
+  console.log(completed, text, id);
+  
   const handleToggle = () => {};
 
   const handleDelete = () => {};
