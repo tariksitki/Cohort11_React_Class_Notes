@@ -1,5 +1,11 @@
 Redux:
 
+Is Akisi:  
+
+1: User dispatch vasitasi ile istegini gönderir. 
+2: Dispatch icinde yazilan action bize bir object return eder. Bu object icine types dosyasindan ilgili type alinir ve bir de user tarafindan girilen bilgi payload olarak konulur. 
+3: reducer, action tarafindan olusturulan object in type ini ve payload ini alir. Buna göre state i günceller. 
+
 ----------------------------------------------------------------
 
 **** Birinci yöntem (store ve provider icin ayri bir klasör olusturmuyoruz, store ve provider app.js icinde yapiliyor)  is akis sirasi:
@@ -120,3 +126,4 @@ programcilik temel mevzusu; func lar haline getir cagir kullan
 
 --- Redux da büyük oranda boiler plate kod bulunur. Bu nedenle her seferinde yazilmasi gereken bu kodlari otomatize etmek icin hazir hale getirmek icin redux toolkit cikarilmistir. 
 
+-- Global state ile local state birlikte kullanilabilir. 
