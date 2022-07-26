@@ -3,7 +3,8 @@ import { Provider } from "react-redux"; // react redux dan
 import "./App.css";
 import Counter from "./components/counter/Counter";
 import Todo from "./components/todo/Todo";
-import reducer from "./redux"; // import sekline dikkat. sadece ./redux dan.
+import counterReducer from "./redux/reducers/counterReducer"; // import sekline dikkat. sadece ./redux dan.
+import { combinedStore } from "./redux";
 
 // index.js yazdigimiz icin; sadece ./redux dan import yapti.
 
@@ -11,7 +12,11 @@ import reducer from "./redux"; // import sekline dikkat. sadece ./redux dan.
 // Provider react redux dan eklenir. createStore redux dan eklenir.
 
 function App() {
-  const store = createStore(reducer);
+    /// birinci yöntem:
+  // const store = createStore(counterReducer);
+
+    //// ikinci yöntem:
+  const store = combinedStore();
 
   return (
       /// Cok önemli. Provider icinde store unutma ************************ 

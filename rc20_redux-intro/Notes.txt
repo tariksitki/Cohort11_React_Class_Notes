@@ -1,4 +1,17 @@
-Redux
+Redux:
+
+----------------------------------------------------------------
+
+**** Birinci yöntem (store ve provider icin ayri bir klasör olusturmuyoruz, store ve provider app.js icinde yapiliyor)  is akis sirasi:
+
+1: initial state ve reducer olusturma 
+2: app.js de store olusturma, provider ile sarmalama 
+3: kullanilacak yerlerde dispatch ve useSelector kullanma 
+
+-- projemiz büyüdügünde bu sekilde kullanildiginda karisiklik olur. o nedenle diger klasörlü yapiyi kullaniyoruz. 
+
+***  Bu yöntemde; state ler kullanildiklari yerde; dispatch icerisine manuel olarak type yazilir. Burada best practice olarak, bu stateleri degistirecek action lar yazilir ve dispatch ler icerisine bu action lar verilir. Bunlar zorunluluk degil sadece best practice. 
+----------------------------------------------------------------
 
 Bir global state management library dir. 
 
@@ -102,4 +115,8 @@ programcilik temel mevzusu; func lar haline getir cagir kullan
 
 
 - reducer klasörü icinde sadece index.js yazdigimizda sadece .redux klasöründen import eder. sadece importu kisaltma saglar.
+
+-- redux da store u bir cati olarak düsünebiliirz. Bu cati altinda kücük kücük state ler bulunur ve sonsuz sayida state bulunabilir. 
+
+--- Redux da büyük oranda boiler plate kod bulunur. Bu nedenle her seferinde yazilmasi gereken bu kodlari otomatize etmek icin hazir hale getirmek icin redux toolkit cikarilmistir. 
 
