@@ -1,0 +1,19 @@
+
+
+useReducer birden cok state oldugunda tümünü bir cati altinda toplamak 
+
+useTransition ve useId   react 18 ile geldi.
+
+bugün görecegimiz hook lar genelde performans ile ilgili 
+Docs da bize bu hook lara ihtiyac kalmayacak sekilde kod yazmamizi tavsiye eder. 
+
+
+
+useRef 
+iki kullanim 
+1: react da dom a elesmenin bir yöntemi olarak kullanmak (spesifik dom elemanı seçerken)
+2: kendi elimizle object olusturabiliriz.
+
+useref ile olusturulan object in render larda referansi degismez.
+her render d aayni kaldigi icin performasni artirir. normalde dom elementleri her render da referans degerleri degisir. 
+

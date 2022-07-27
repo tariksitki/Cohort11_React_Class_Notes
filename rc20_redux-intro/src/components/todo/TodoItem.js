@@ -1,13 +1,21 @@
 
 import okLogo from '../../assets/ok.png';
 import deleteLogo from '../../assets/delete.png';
+import { useDispatch } from 'react-redux';
+import { deleteTodo, toggleTodo } from '../../redux/actions/TodoActions';
 
 const TodoItem = ({ completed, text, id }) => {
-  console.log(completed, text, id);
-  
-  const handleToggle = () => {};
+  // console.log(completed, text, id);
 
-  const handleDelete = () => {};
+  const dispatch = useDispatch();
+  
+  const handleToggle = () => {
+    dispatch(toggleTodo(id));
+  };
+
+  const handleDelete = () => {
+    dispatch(deleteTodo(id));
+  };
 
       ///  *********  Güzel bir Css kullanimi:
   const styled = {

@@ -14,15 +14,24 @@ const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
 
   case ADDTODO:
-    return {
-      todoList : [ ...state.todoList, { id: new Date().getTime(), text : payload, completed : false }]
+    return (
+      {
+      todoList : [ ...state.todoList, { ...payload }]
     }
+    )
+    
 
   case TOGGLETODO:
-    return { ...state, ...payload }
+    return { todoList : state.todoList.map((item) => {
+      return (
+        item.id === payload ? {...item, completed : !item.completed} : {...item}
+      )
+    }) };
+    // map burada liste return edecegi icin liste yapmadik. 
 
   case DELETETODO:
-    return { ...state, ...payload }
+    return { todoList : state.todoList.filter((item) => item.id !== payload )}
+    // filter burada list return edecegi icin tekrar liste yapmadik. 
 
   case CLEARTODO:
     return initialState;

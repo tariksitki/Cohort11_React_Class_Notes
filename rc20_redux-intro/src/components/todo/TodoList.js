@@ -6,13 +6,14 @@ import TodoItem from './TodoItem';
 
 const TodoList = () => {
   const todos = useSelector((state) => state.todoReducer.todoList);
-  console.log(todos);
+  // console.log(todos);
 
   const dispatch = useDispatch();
 
   const handleClearList = () => {
-     dispatch(clearTodo());
+     return (window.confirm("Are You Sure to Delete all Todos???") && dispatch(clearTodo()))
   };  
+  // react da window.confirm ***
 
   return (
     <div>
@@ -20,7 +21,7 @@ const TodoList = () => {
         {todos.length === 0 &&  <h3>You have no Task</h3>}
 
         {todos?.map((item, index) => {
-          return <TodoItem key={item.id} {...todos[index]} />;
+          return <TodoItem key={item?.id} {...todos[index]} />;
         })}
       </div>
       <div className="clear-wrapper">
