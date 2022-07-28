@@ -1,26 +1,34 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Link from "@mui/material/Link";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUser } from "../features/authSlice";
 
 export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-      // email ve password verileri user state ine aktarilacak.
+    // email ve password verileri user state ine aktarilacak.
 
-    setEmail("");
-    setPassword("");
-    email && password ? navigate("/") : alert("Please fill email and password");
+    if (email && password) {
+      dispatch(setUser({email, password}));
+      navigate("/");
+      setEmail("");
+      setPassword("");
+    } else {
+      alert("Please fill email and password");
+    }
   };
 
   return (
@@ -28,9 +36,9 @@ export default function Login() {
       <Box
         sx={{
           marginTop: 8,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
         <Avatar
@@ -80,12 +88,12 @@ export default function Login() {
       </Box>
 
       <Typography variant="body2" color="text.secondary" align="center">
-        {'Copyright © '}
+        {"Copyright © "}
         <Link color="inherit" href="https://www.clarusway.com/">
           Clarusway
         </Link>
         {new Date().getFullYear()}
-        {'.'}
+        {"."}
       </Typography>
     </Container>
   );

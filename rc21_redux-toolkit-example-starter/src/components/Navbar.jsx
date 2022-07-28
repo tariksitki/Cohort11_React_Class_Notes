@@ -5,13 +5,29 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { clearUser } from "../features/authSlice";
 
 export default function Navbar() {
   const navigate = useNavigate();
-  const user = true;
+    // birinci kullanim klasik yöntem
+  // const user = useSelector((state) => state.auth.user);
+
+  const {user} = useSelector(state => state.auth);
+  console.log(user);
+  // state lerimize bakmanin daha güzel bir yöntemi redux dev tool kullanmaktir.
+
+  const dispatch = useDispatch();
 
   const handleLogout = () => {
-    window.confirm("Are You Sure to Logout") && navigate("/login");
+   if ( window.confirm("Are You Sure to Logout")) {
+    navigate("/login");
+    dispatch(clearUser());  /// clear da herhangi bir payload yok.
+   }
+  };
+
+  const handleLogin = () => {
+    user ? alert("You are already Logged in") : navigate("/login")
   };
 
   return (
@@ -29,7 +45,7 @@ export default function Navbar() {
           {user ? (
             <Button color="inherit" onClick={handleLogout} >Logout</Button>
           ) : (
-            <Button color="inherit" onClick={navigate("/")} >Login</Button>
+            <Button color="inherit" onClick={handleLogin} >Login</Button>
           )}
         </Toolbar>
       </AppBar>

@@ -1,6 +1,25 @@
 
 redux toolkit docs:   https://redux-toolkit.js.org/
 
+
+Toolkit ile redux islem sirasi:
+
+1: features klasörü olustur. icinde slice lari olustur. tek bir slice dosyasi icinde type action reducer hepsi bulunur. authontication yada api den gelecek bilgi icin ayri bir slice olusturulur. yani normal redux da global state de tutulacak her bir veri icin ayri ayri reducer type ve action olusturdugumuz gibi burada ayri bir slice olustururuz. 
+
+2: app adinda klasör olustur ve icinde store olustur 
+
+3: app.js de Provider ile sarmalama yap.
+
+4: consume islemi (normal redux da oldugu gibi useSelector ile gerekli olan yerde yapilir.)
+
+
+Note: eger redux toolkit kullaniyorsak redux dev tool kendiliginden otomatik olarak kullanima hazir hale gelir. ama klasik redux kullaniyorsak bazi islemler yapmamiz gerekecektir. yani dev tool;  redux toolkit de default olarak true dur. eger biz kullanmak istemezsek; app klasörü icindeki store.js de false yapmamiz gerekir. 
+
+Kullanmama sebepleri:
+1: baska bir tool kullanabiliriz
+2: production ortaminda görülmesini istemeyiz. 
+
+
 Önemli:  redux toolkit yapisini manuel olarak olusturmak zorunda degiliz. 
 npx create-react-app my-app --template redux  
 Bu komut ile redux template i hazir bie app olusturabiliriz. 
@@ -34,4 +53,17 @@ Not:  normal de redux ypkleme esnasinda yarn add redux react-redux yüklenir.
 Ancak redux i toolkit ile kullanacak isek bu sadece react ile kullanilabilir. Bu nedenle normal redux i kurmamiza gerek yok.
 
 yarn add @reduxjs/toolkit react-redux  **************************************
+
+
+
+
+
+- `Redux Dev Tools` : Chrome uzerinde calisan ve global state uzerinde yapilan tum degisikliklerin takip edilmesini saglayan tarayici uzantisidir. Indirmek icin [tiklayiniz.](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?utm_source=chrome-ntp-icon)`
+
+Redux dev tools; redux state lerini chart olarak, grafik olarak yada raw olarak anlik olarak görmemizi saglayan bir gui dir. 
+
+Bu gui vasitasi ile kolaylikla debug yapabiliriz. 
+
+
+Note: eger manuel build yaparsak; kodumuzdaki her degisiklikte tekrar build yapmamiz gerekir. ama bir ci cd pipeline (continious integration con deploy) i kurarsak yani live deploy yaparsak, bu durumda github her degisiklikte vercel gibi ortamlari uyarir ve vercel de trigger deploy yapar. 
 
