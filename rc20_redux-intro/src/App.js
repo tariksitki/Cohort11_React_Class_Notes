@@ -16,6 +16,7 @@ function App() {
   // const store = createStore(counterReducer);
 
     //// ikinci yöntem:
+    // reducer lar reducer dosyasi icinde olusturuldu. bunlar redux a ait index.js de  combine edilerek bir degiskene atildi. sonra yine index.js de store olusturan bir func olusturuldu. Burada uzun islemler yapmak yerine sadece bu func i cagirdik.
   const store = combinedStore();
 
   return (

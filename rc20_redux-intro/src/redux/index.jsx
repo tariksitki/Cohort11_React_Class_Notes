@@ -58,7 +58,7 @@ const rootReducer = combineReducers({
     counterReducer : counterReducer,
     todoReducer : todoReducer,
 });
-/// Önemli:  burada counterReduver ve todoReducer isimleri önemli. Cünkü ui tarafinda cagirma esnasinda bu isimleri kullanacagiz. 
+/// Önemli:  burada counterReducer ve todoReducer isimleri önemli. Cünkü ui tarafinda cagirma esnasinda bu isimleri kullanacagiz. 
 
     /// burada bizim store umuzu return eden bir func yazacagiz:
 

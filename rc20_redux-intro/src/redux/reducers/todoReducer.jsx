@@ -1,12 +1,12 @@
-import { ADDTODO, CLEARTODO, DELETETODO, TOGGLETODO } from "../types/todoTypes";
+import { ADDTODO, CLEARTODO, DATAFROMLOCALSTORAGE, DELETETODO, TOGGLETODO } from "../types/todoTypes";
 
   // todo icin bir state yazacagiz. Bu nedenle bu state array icinde object formatinda olmali. Yani json formati. Cünkü todo lara ait id, date, completed, text gibi verileri tutmamiz gerekecek. 
 
 const initialState = {
-  todoList : [],
+  todoList : JSON.parse(localStorage.getItem("todos")) || [] ,
 };
 
-  //// Önemli: counter örneginde reduver i kendimiz yazmistik bu nedenle action.type kullanmistik. Burada ise action otomatik olarak destructure edilir ve switch icine direkt olarak type yazilir. 
+  //// Önemli: counter örneginde reducer i kendimiz yazmistik bu nedenle action.type kullanmistik. Burada ise action otomatik olarak destructure edilir ve switch icine direkt olarak type yazilir. 
 
   /// action icerisine type ve payload alir
 
@@ -14,11 +14,11 @@ const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
 
   case ADDTODO:
-    return (
-      {
-      todoList : [ ...state.todoList, { ...payload }]
-    }
-    )
+    return {
+      // localstorage kullanmadan önceki hali bu sekilde idi. 
+      // todoList : [ ...state.todoList, { ...payload }]
+      todoList: JSON.parse(localStorage.getItem("todos")) || [],
+    };
     
 
   case TOGGLETODO:
@@ -35,6 +35,9 @@ const todoReducer = (state = initialState, { type, payload }) => {
 
   case CLEARTODO:
     return initialState;
+
+  case DATAFROMLOCALSTORAGE:
+    return {todoList: JSON.parse(localStorage.getItem("todos")) || []}
 
   default:
     return state;

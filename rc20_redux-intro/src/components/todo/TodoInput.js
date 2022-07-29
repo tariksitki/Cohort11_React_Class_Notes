@@ -1,41 +1,26 @@
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { addTodo } from "../../redux/actions/TodoActions";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, dataFromLocalStorage } from "../../redux/actions/TodoActions";
 
 const TodoInput = () => {
-  const [text, setText] = useState("");
-  const [todos, setTodos] = useState([]);
   const dispatch = useDispatch();
 
+  const [text, setText] = useState("");
+  let todos = useSelector((state) => state.todoReducer.todoList);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newTodo = { id: new Date().getTime(), text: text, completed: false }
     if (text) {
-      dispatch(
-          addTodo(newTodo)
-        );
-
-      setTodos([...todos, newTodo]);
+      const newTodo = { id: new Date().getTime(), text: text, completed: false }
+      localStorage.setItem("todos", JSON.stringify([...todos, newTodo]));
+      dispatch(dataFromLocalStorage())
       
     } else {
       alert("Please Enter a Value for Task");
     }
     setText("");
-    
-    // todos?.length > 0
-    //   ? localStorage.setItem("todos", JSON.stringify([...todos, newTodo]))
-    //   : localStorage.setItem("todos", JSON.stringify([newTodo]));
-    
-    
-    
   };
   
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos))
-  }, [todos]);
-  
-  console.log(todos);
-
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -45,7 +30,7 @@ const TodoInput = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button type="submit" className="add-button">
+      <button type="submit" className="add-button" style={{cursor : "pointer"}} >
         Add
       </button>
     </form>
