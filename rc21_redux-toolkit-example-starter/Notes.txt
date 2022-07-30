@@ -1,0 +1,37 @@
+
+redux toolkit docs:   https://redux-toolkit.js.org/
+
+Önemli:  redux toolkit yapisini manuel olarak olusturmak zorunda degiliz. 
+npx create-react-app my-app --template redux  
+Bu komut ile redux template i hazir bie app olusturabiliriz. 
+Otomatik app gelir, icinde counter örnegi gelir. 
+
+
+Bu projedeki verilerimizi su api den cekiyoruz:
+
+https://newsapi.org/
+
+Bu projede style icin mui 
+api den veri cekmek icin axios
+verilerimizi tutmak icin redux kullanacagiz. 
+
+Redux i toolkit üzerinden kullanacagiz. 
+
+Bu api normalde ücretsiz ama canliya deploy etmemize izin vermiyor ücret istiyor. 
+
+************
+Kodumuzda bulunan eski kodlari yeni versiyona cevirmek icin tüm eski kodlari yeni versiyona göre yazmamiz gerekir. ancak dependency leri güncellemenin kolay bir yolu vardir:
+
+yarn upgrade --latest  *****************************
+
+
+React 17 yi React 18 e cevirmeyi index.js de yaptik.
+
+
+
+Not:  normal de redux ypkleme esnasinda yarn add redux react-redux yüklenir. 
+
+Ancak redux i toolkit ile kullanacak isek bu sadece react ile kullanilabilir. Bu nedenle normal redux i kurmamiza gerek yok.
+
+yarn add @reduxjs/toolkit react-redux  **************************************
+
