@@ -67,3 +67,12 @@ Bu gui vasitasi ile kolaylikla debug yapabiliriz.
 
 Note: eger manuel build yaparsak; kodumuzdaki her degisiklikte tekrar build yapmamiz gerekir. ama bir ci cd pipeline (continious integration con deploy) i kurarsak yani live deploy yaparsak, bu durumda github her degisiklikte vercel gibi ortamlari uyarir ve vercel de trigger deploy yapar. 
 
+
+*** Chrome extension olarak redux dev tool kullaniyoruz bu redux a aittir. Birde console kisminda react a ait dev tool bulunmaktadir. Bunu da development asamasinda kullanabiliriz. internet sayfasinin sag üst kösesinde bulunan react dev tool a ait icon sayesinde, bir internet sayfasinin react ile yapilip yapilmadigini ve development asamasinda mi yoksa production asamasinda mi oldugunu görebiliirz. 
+
+
+Bir promise yapinin 3 tane lifecycle i vardi:
+1: pending
+2: fullfilled
+3: rejected
+

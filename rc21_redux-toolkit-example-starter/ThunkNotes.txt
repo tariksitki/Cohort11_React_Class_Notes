@@ -1,0 +1,19 @@
+
+Thunk:
+
+Normalde, ui tarafindan yapilan istekler dispatch vasitasi ile yapilir. ve dispatch den gelen istekler actionlar vasitasi  ile object formatina dönüstürülür ve dogrudan reducer a gönderilir. 
+
+Ancak eger redux ile birlikte api den veri cekme yani async bir islem kullanilacaksa bu durumda dispatch ile isteklerimiiz direkt olarak reducer a göndermemiz mümkün olmuyor. Cünkü dispatch ile istek yaptigimizda, api den verinin gelmesi zaman aliyor. iste bu nedenle istek direkt reducer a gönderildiginde henüz api den veri gelmemis oluyor ve bu nedenle reducer state imizi dogru bir sekilde degistiremiyor. Bu nedenle dispatch ile reducer arasinda thunk adinda bir middleware giriyor. Bu bir yazilimdir. Bu yazilim api den veri gelmesini bekliyor, gelen response i action haline dönüstürüyor ve daha sonra dispatch den gelen istegi reducer a aktariyor. 
+
+Bunun sebebi sudur;  reducer pure func seklinde calisir. async yapilari anlamaz. iste bu ara yazilimda bizim api den istek yaptigimiz async kodu, action yani object return eden kod parcasi haline getirir.
+
+
+Thunk, bizim su an kullandigimiz redux toolkitin default middleware idir. 
+
+Soru: Redux da middleeware ne zaman kullanilir?
+redux ile async yapi kullanacagimiz zaman.  state yapisi async yapi ile uyusmadigi icin kullanilir. 
+
+
+redux toolkit de default middleware oldugu icin thunk icin yazilmis hazir kodlar bulunmaktadir. Eger thunk ile klasik redux kullanirsak o zaman cok daha fazla islem yapmamiz gerekir. 
+
+
