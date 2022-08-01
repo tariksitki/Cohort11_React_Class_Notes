@@ -21,13 +21,13 @@ export default function Navbar() {
 
   // önemli Not: Logut yaptigimizda, news sayfasinda bile olsak bizi login sayfasina yönlendirir dolayisi ile news component i ölmüs olur. iste logout yaptigimizda redux da sadece auth state imiz false olmasin ayni zamanda news state imizinde icerisini bosaltalim istersek, o zaman news component imizin useEffect kismindaki component will unmount func ini yazacagiz. bu projemizde yazdik.
   // neden verileri temizliyoruz. cünkü api den gelen veriler büyük miktarda veriler olabilir. Bu nedenle user in hafizasinda fazla yer kaplamamak icin siliyoruz.
-  
+
   const handleLogout = () => {
     if (window.confirm("Are You Sure to Logout")) {
       navigate("/login");
       dispatch(clearUser()); /// clear da herhangi bir payload yok.
     }
-  };
+  };  
 
   const handleLogin = () => {
     user ? alert("You are already Logged in") : navigate("/login");
