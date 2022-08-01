@@ -76,3 +76,10 @@ Bir promise yapinin 3 tane lifecycle i vardi:
 2: fullfilled
 3: rejected
 
+
+
+**** redux in avantajlarindan bir tanesi: state logic i ile ui  logic i birbirinden ayirabiliyoruz.
+
+
+**** cok daha hizli degisen frekansi yüksek olan yerlerde redux kullanimi; daha az degisen biraz daha static olan state ler icin ise context kullanimi tavsiye edilir. 
+
