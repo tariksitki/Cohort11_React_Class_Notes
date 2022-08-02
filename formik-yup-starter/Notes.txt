@@ -1,0 +1,72 @@
+
+https://formik.org/
+
+yarn add formik yup 
+
+aralarda bosluk birakarak bir anda birden fazla library eklenebilir. 
+
+mui icons cok yer kapladigi icin react icons kullandik 
+
+mui ile yup ve formik cok güzel calisir cok yerde beraber kullanilir 
+
+Box; mui de bir div dir 
+
+textField ise input elementi 
+
+
+
+
+ 
+formik 
+
+
+bir form handling library dir. yani form lari yönetmemizi saglayan harici bir library. görüntü olarak mui kullanilirken, yönetmek icin formik 
+
+yup ise form validation library 
+en az 8 karakter 1 özel karakter gibi kurallari uygulamak icin.
+input daki anlik degisimleri gösterebilir. 
+
+https://www.npmjs.com/package/yup    yup docs 
+
+https://github.com/jquense/yup
+
+
+formik in birden cok kullanim sekli var. 
+biz best practice görecegiz.
+
+
+formik de state yazmamiza gerek yok. state ler formik icinde otomatik var. biz sadece alip kullanacagiz. 
+normalde bir her bir input icin bir state olusturuyorduk. 
+
+formik diye component de var 
+
+Navigate in de hook u var component i vardi 
+
+formik component i kullanmak useFormik kullanmaktan daha güzel ve clean kod sagliyor. O nedenle biz bu projede formik in component seklini kullanacagiz. Ayni react router da oldugu gibi burada da formik in hem hook olarak kullanimi hem de componnet seviyesinde kullanimi mevcuttur. 
+
+
+formik in kendi validation i var ama genelde yup in ki daha kolay oldugu icin developer lar bunu tercih ediyor.
+
+yup in kendine ait bir docs u yok. sadece npm icinde bir docs u var. 
+
+
+
+
+
+Formik Notes:
+
+Biz formik den bir form aldigimizda, handleSubmit handleChange gibi tüm func lar otomatik olarak icine gelir. 
+
+Formik de form iki kisimdan olusur. Birincisi logic kisminin yazildigi kod kismi digeri ise asagida form un html kisminin olusturuldugu bölümdür. 
+
+formik in bazi property leri var.
+
+1: initialValue : Bizim inputumuzun baslangic degerleri
+2: validationSchema (validation uzunsa baska dosya da yazilir.)
+3: onSubmit : form submit edildiginde yapilacak islemlerin kodlari yazilir
+    onSubmit de icine 2 tane parametre alir. birinci parametre formlarin baslangic degerleri yani ismi values.  ikinci parametre ise tüm action lari iceren setSubmitting
+
+4: 
+
+
+Önemli: formik formlari icin bizim state yazmamiza gerek yoktur. otomatik olarak state ler yazilmistir.  
