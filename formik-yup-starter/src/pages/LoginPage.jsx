@@ -1,3 +1,7 @@
+
+
+/// ************  Önemli Not:  Bu sayfada yazdigimiz kodalri birinci yöntem ile yazdik. yani tüm kodlar tek dosyada. Ikinci yöntem ve best practice olarak; yup ve formik e ait kodlari farkli dosyalarda yazdik. o kodlar da signUpPage de. Eger kodalrimiz uzun ise harici bir sayfaya koymak daha iyi bir yöntem.
+
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";

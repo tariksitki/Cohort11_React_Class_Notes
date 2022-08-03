@@ -14,7 +14,10 @@ Box; mui de bir div dir
 textField ise input elementi 
 
 
+*********************  Önemli:
 
+Formik ile input larimizin state yönetimlerini, initial value larini, onSubmit onChange gibi func larini yönetiyoruz. 
+Yup ile ise formumuzun validation islemlerini yönetiyoruz. Yani mesela isim bölmesi en az 8 karakter olsun. password en fazla 20 karakter olsun gibi validation lar. 
 
  
 formik 
@@ -66,7 +69,7 @@ formik in bazi property leri var.
 3: onSubmit : form submit edildiginde yapilacak islemlerin kodlari yazilir
     onSubmit de icine 2 tane parametre alir. birinci parametre formlarin baslangic degerleri yani ismi values.  ikinci parametre ise tüm action lari iceren setSubmitting
 
-4: 
+4: component (bu formik in bir component cagirabilecegini gösterir)
 
 
 Önemli: formik formlari icin bizim state yazmamiza gerek yoktur. otomatik olarak state ler yazilmistir.  
