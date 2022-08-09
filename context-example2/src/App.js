@@ -10,7 +10,7 @@ function App() {
   //   fetch('https://api.github.com/users')
   //     .then((res) => res.json())
   //     .then((data) => setUsers(data));
-  // }, []);
+  // }, []);   
 
   return (
     <>
