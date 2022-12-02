@@ -1,7 +1,7 @@
 
 Tema auth language gibi bilgilerin tüm component lerde kullanilmasi gerekir. Bu nedele bu bilgiler global state ler de tutulmasi gereken veriler icin en iyi örneklerdir. 
 
-Global state in dezavantajlari da vardir. 
+Global state in dezavantajlari da vardir.    
 
 avantaj:
 - Global olarak paylasim yapmak     
