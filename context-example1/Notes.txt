@@ -4,7 +4,7 @@ Tema auth language gibi bilgilerin tüm component lerde kullanilmasi gerekir. Bu
 Global state in dezavantajlari da vardir.    
 
 avantaj:
-- Global olarak paylasim yapmak        
+- Global olarak paylasim yapmak           
 
 dezavantaj:    
 - component kullanimini azaltir yani react in dogal yapisini bozar.
