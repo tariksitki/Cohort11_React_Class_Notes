@@ -12,7 +12,7 @@ dezavantaj:
 - Mesela bir button component i olusturuyoruz. ve bunu propslar vasitasi ile bir yerde yesil olarak baska yerde mavi olarak cagiriyoruz. Ama global state kullandigimizda bu mümkün olmuyor cünkü global state demek tek bir yere bagli demek. tek bi sekilde calisir. Bu nedenle props kullanimi context e göre daha modülerdir. ve React in aslinda genel felsefesi budur. Bir kez kod yaz her yerde kullan. Dolayisi ile context, component in yeniden kullanilabilirligini azalttigi icin react in genel felsefesine ters
 
 - diger ve daha önemli dezavantaj: global state dikkatli kullanilmazsa accessive rendering yapma tehlikesi meydana gelir. Global deki bir degisim ile, alttaki tüm component lar render edilir. Bu nedenle gereksiz kullanimda gereksiz bir rendering meydana gelir. 
-
+   
 component ler arasi props iletme islemine Props Drilling denir. 
 
 dolmusta elden ele para gönderme.  Muavin ise context api 
