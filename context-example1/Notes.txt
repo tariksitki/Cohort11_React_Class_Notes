@@ -6,7 +6,7 @@ Global state in dezavantajlari da vardir.
 avantaj:
 - Global olarak paylasim yapmak                 
 
-dezavantaj:       
+dezavantaj:         
 - component kullanimini azaltir yani react in dogal yapisini bozar.
 - Component global state e bagimli hale gelir ve artik sadece bu is icin kullanilabilir. ama mesela parametre alan ve bu parametreye göre farkli farkli calisan bir func daha modülerdir.
 - Mesela bir button component i olusturuyoruz. ve bunu propslar vasitasi ile bir yerde yesil olarak baska yerde mavi olarak cagiriyoruz. Ama global state kullandigimizda bu mümkün olmuyor cünkü global state demek tek bir yere bagli demek. tek bi sekilde calisir. Bu nedenle props kullanimi context e göre daha modülerdir. ve React in aslinda genel felsefesi budur. Bir kez kod yaz her yerde kullan. Dolayisi ile context, component in yeniden kullanilabilirligini azalttigi icin react in genel felsefesine ters
