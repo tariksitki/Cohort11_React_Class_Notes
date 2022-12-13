@@ -13,7 +13,7 @@ dezavantaj:
 
 - diger ve daha önemli dezavantaj: global state dikkatli kullanilmazsa accessive rendering yapma tehlikesi meydana gelir. Global deki bir degisim ile, alttaki tüm component lar render edilir. Bu nedenle gereksiz kullanimda gereksiz bir rendering meydana gelir. 
    
-component ler arasi props iletme islemine Props Drilling denir. 
+component ler arasi props iletme islemine Props Drilling denir.   
 
 dolmusta elden ele para gönderme.  Muavin ise context api   
 
