@@ -15,7 +15,7 @@ dezavantaj:
    
 component ler arasi props iletme islemine Props Drilling denir.   
 
-dolmusta elden ele para gönderme.  Muavin ise context api   
+dolmusta elden ele para gönderme.  Muavin ise context api     
 
 Props drilling bir problemdir. Cözümü ise global state management      
 
