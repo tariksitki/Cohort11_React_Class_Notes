@@ -19,7 +19,7 @@ dolmusta elden ele para gönderme.  Muavin ise context api
 
 Props drilling bir problemdir. Cözümü ise global state management                  
 
-Alternatif olarak router ile de veri gönderimi yapabiliriz. useParams useLocation    
+Alternatif olarak router ile de veri gönderimi yapabiliriz. useParams useLocation      
 
 Context icine; degisken, object func yani hersey konulabilir. 
 
