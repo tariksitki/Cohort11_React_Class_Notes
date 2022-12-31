@@ -44,7 +44,7 @@ Context Api kullanim Adimlari:
 
 1: Create Context (createContext hook u kullanilir) 
 2: Provider ile sarmalama (nerede kullanacak isek)  : Provider ile value icerisinde state yada func gönderebiliriz. Sarmalama icindeki tüm component ler bu verileri kullanabilir.
-3: useContext (consume icin bu hook kullanilir)  
+3: useContext (consume icin bu hook kullanilir)    
 
 
 *** Bir projede birden cok context olabilir. Ve context tüm app i sarmalamak zorunda degildir. sadece bir kac component i sarmalayan bir context de olabilir. 
