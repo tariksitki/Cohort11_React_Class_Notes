@@ -36,7 +36,7 @@ Redux in state yönetimi icin gömülü olarak tool lari var. icinde gömülü r
 
 Redux ve context in genel ismi "Global State Management(GSM) Methods"
 
-GSM nedir ve bunun icin kullanilan paket lere örnek verir misiniz ?           
+GSM nedir ve bunun icin kullanilan paket lere örnek verir misiniz ?              
 
 
 
