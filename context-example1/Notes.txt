@@ -34,7 +34,7 @@ Context kullanimi daha kolay. Ama büyük projelerde redux kullanimi zorunlu hal
 Redux in state yönetimi icin gömülü olarak tool lari var. icinde gömülü reducer lari var bu sekilde state leri azaltabiliyoruz. Tool lari vasitasi ile debug yapmak kolaylasiyor. Ama bunlari context de ayri ayri yapmamiz gerekiyor. 
 
 
-Redux ve context in genel ismi "Global State Management(GSM) Methods"   
+Redux ve context in genel ismi "Global State Management(GSM) Methods"     
 
 GSM nedir ve bunun icin kullanilan paket lere örnek verir misiniz ?              
 
