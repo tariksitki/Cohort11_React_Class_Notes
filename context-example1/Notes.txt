@@ -29,7 +29,7 @@ Redux daha eski. Context; redux dan esinlenerek yapilmis.
 Redux normal vanilie Js ile kullanilabilir. Js versiyonu ve react versiyonu vardir. 
 
 Context kullanimi daha kolay. Ama büyük projelerde redux kullanimi zorunlu hale gelebiliyor. 
-  
+    
 
 Redux in state yönetimi icin gömülü olarak tool lari var. icinde gömülü reducer lari var bu sekilde state leri azaltabiliyoruz. Tool lari vasitasi ile debug yapmak kolaylasiyor. Ama bunlari context de ayri ayri yapmamiz gerekiyor. 
 
