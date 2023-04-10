@@ -40,7 +40,7 @@ GSM nedir ve bunun icin kullanilan paket lere örnek verir misiniz ?
 
 
 
-Context Api kullanim Adimlari:                                                                 
+Context Api kullanim Adimlari:                                                                   
 
 1: Create Context (createContext hook u kullanilir)             
 2: Provider ile sarmalama (nerede kullanacak isek)  : Provider ile value icerisinde state yada func gönderebiliriz. Sarmalama icindeki tüm component ler bu verileri kullanabilir.
