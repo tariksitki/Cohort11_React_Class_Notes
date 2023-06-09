@@ -38,7 +38,7 @@ Redux ve context in genel ismi "Global State Management(GSM) Methods"
 
 GSM nedir ve bunun icin kullanilan paket lere örnek verir misiniz ?                                                        
 
-
+   
 
 Context Api kullanim Adimlari:                                                                                                               
 
